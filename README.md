@@ -1,3 +1,26 @@
+# Dashboard App Demo
+In the first iteration of the test, please build a dashboard inspired by the following design using React.js. The data displayed on the page can be static. 
+
+Note: instead of the colored boxes, please display the values in a different visual display, such as a Pie Chart. You can use existing libraries.
+Note: please fill the dashboard with arbitrary data based on the example above.
+Please share your work on Github when done.
+
+- Pie Chart Metrics for application Reports.
+- Table with application reports.
+- Nicely formatted data.
+- Data can be sorted and grouped by different fields in the table.
+- Data is paginated so it can be read easily.
+- Status are colored for readability.
+- Ability to take action for each report by clicking the icon on the right side of each row.
+
+# Template 
+<img width="1348" alt="image" src="https://github.com/daniel-moya/dashboard-app/assets/20147650/20193162-c946-4b70-a56a-5e1d99d1aa95">
+
+# Demo
+https://dashboard-app-roan-eight.vercel.app/
+<img width="1063" alt="image" src="https://github.com/daniel-moya/dashboard-app/assets/20147650/c8e7169b-353d-438a-9b0c-05a9011af4b1">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
