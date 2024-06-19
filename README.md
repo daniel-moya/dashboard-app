@@ -1,5 +1,6 @@
 # Dashboard App Demo
-https://dashboard-app-roan-eight.vercel.app/
+You can see the demo here: https://dashboard-app-roan-eight.vercel.app/
+
 In the first iteration of the test, please build a dashboard inspired by the following design using React.js. The data displayed on the page can be static. 
 
 Note: instead of the colored boxes, please display the values in a different visual display, such as a Pie Chart. You can use existing libraries.
