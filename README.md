@@ -22,6 +22,15 @@ Please share your work on Github when done.
 https://dashboard-app-roan-eight.vercel.app/
 <img width="1063" alt="image" src="https://github.com/daniel-moya/dashboard-app/assets/20147650/c8e7169b-353d-438a-9b0c-05a9011af4b1">
 
+# Build and run with Docker
+Make sure docker is running on your localhost. You can build the image running directly the following command on your terminal.
+
+```docker build . -t dashboard_app```
+
+Then run the container based on the image you just built.
+
+`docker run -p 3000:3000 dashboard_app`
+
 
 # Getting Started with Create React App
 
