@@ -1,11 +1,11 @@
 # Dashboard App Demo
 You can see the demo here: https://dashboard-app-roan-eight.vercel.app/
 
-In the first iteration of the test, please build a dashboard inspired by the following design using React.js. The data displayed on the page can be static. 
+### Second Iteration of Dashbaord App
+Consumes real application data from the 3rd party API using an api proxy. You can find the repo under https://github.com/daniel-moya/dashboard-proxy
 
-Note: instead of the colored boxes, please display the values in a different visual display, such as a Pie Chart. You can use existing libraries.
-Note: please fill the dashboard with arbitrary data based on the example above.
-Please share your work on Github when done.
+### First Iteration of Dashbaord App
+Uses mocked Data. You can checkout first iteration (v1) under `v1` branch
 
 - Pie Chart Metrics for application Reports.
 - Table with application reports.
