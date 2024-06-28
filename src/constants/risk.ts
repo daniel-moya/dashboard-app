@@ -1,5 +1,5 @@
 export const Risk = {
-  Low: 'Low',
-  Average: 'Average',
-  High: 'High'
+  low: 'low',
+  medium: 'medium',
+  high: 'high'
 };

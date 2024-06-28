@@ -5,21 +5,21 @@ import { Risk } from '../constants/risk';
 import { CheckCircleIcon } from '../assets/icons/check-circle';
 
 const riskIconMap = {
-  [Risk.Low]: CheckCircleIcon,
-  [Risk.Average]: WarningIcon,
-  [Risk.High]: DangerIcon,
+  [Risk.low]: CheckCircleIcon,
+  [Risk.medium]: WarningIcon,
+  [Risk.high]: DangerIcon,
 }
 
 const riskColorMap = {
-  [Risk.Low]: 'green',
-  [Risk.Average]: '#dac01a',
-  [Risk.High]: 'red',
+  [Risk.low]: 'green',
+  [Risk.medium]: '#dac01a',
+  [Risk.high]: 'red',
 }
 
 const riskPriorityMap = {
-  [Risk.Low]: 3,
-  [Risk.Average]: 2,
-  [Risk.High]: 1,
+  [Risk.low]: 3,
+  [Risk.medium]: 2,
+  [Risk.high]: 1,
 }
 
 
