@@ -1,5 +1,6 @@
 export const Status = {
   Approved: 'Approved',
-  Processing: 'Processing',
-  Invited: 'Invited'
+  'Ready For Review': 'Ready For Review',
+  'In Progress': 'In Progress',
+  Rejected: 'Rejected'
 }
