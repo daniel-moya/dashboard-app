@@ -127,7 +127,10 @@ table td button svg {
   cursor: pointer;
 }
 
-
+.load-bar {
+  padding: 1em 0 1em 1.2em;
+  min-height: 10vh;
+}
 
 
 

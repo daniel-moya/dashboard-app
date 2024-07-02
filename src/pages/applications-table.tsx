@@ -7,8 +7,6 @@ import { getStatusIcon, getStatusPriority } from '../services/status-service';
 import { Table } from '../components';
 import { getFormattedDate, getFormattedTime } from '../services/date';
 import { getApplications } from '../api/api';
-import { getAttributeLabelValue } from '../services/application-service';
-
 
 const columnHelper = createColumnHelper<Application>()
 const columns = [
@@ -17,23 +15,17 @@ const columns = [
     cell: info => <div>{getFormattedDate(info.getValue())}<div>{getFormattedTime(info.getValue())}</div></div>,
     sortingFn: 'datetime',
   }),
-  columnHelper.accessor(row => Object.values(row.attributes), {
+  columnHelper.accessor(row => row.attributes, {
     header: 'Name',
     cell: info => {
-      const firstName = getAttributeLabelValue("First name", info.getValue())
-      const lastName = getAttributeLabelValue("Last name", info.getValue())
-      const email = getAttributeLabelValue("Email", info.getValue())
-      return <div>{firstName} {lastName}<div>{email}</div></div>;
+      return <div>{info.getValue().firstName} {info.getValue().lastName}<div>{info.getValue().email}</div></div>;
     },
     sortingFn: (rowA, rowB) => {
-      const aAttributes = Object.values(rowA.original.attributes);
-      const bAttributes = Object.values(rowB.original.attributes);
+      const firstNameA = rowA.original.attributes.firstName;
+      const lastNameA = rowA.original.attributes.lastName;
 
-      const firstNameA = getAttributeLabelValue("First name", aAttributes);
-      const lastNameA = getAttributeLabelValue("Last name", aAttributes);
-
-      const firstNameB = getAttributeLabelValue("First name", bAttributes);
-      const lastNameB = getAttributeLabelValue("Last name", bAttributes);
+      const firstNameB = rowB.original.attributes.firstName;
+      const lastNameB = rowB.original.attributes.lastName;
 
       return (firstNameA + '' + lastNameA).localeCompare(firstNameB + lastNameB);
     },
@@ -73,14 +65,14 @@ const columns = [
 function ApplicationsTable() {
   const { status, data } = useQuery('applications', () => getApplications())
 
-  if (status === 'loading') return <>'Loading...'</>
+  if (status === 'loading') return <div className="load-bar">Loading Table...</div>
 
   if (status === 'error') return <>'An error has occurred'</>
 
   return (
     <div>
       <Table
-        data={data.items || []}
+        data={data || []}
         columns={columns}
       />
     </div>

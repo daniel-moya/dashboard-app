@@ -1,16 +1,7 @@
 import { useMemo } from "react";
 import { Chart } from "react-google-charts";
 import { useQuery } from 'react-query';
-import { applicationMetrics } from "./mocked-data";
-
-export const demo = [
-  ["Task", "Hours per Day"],
-  ["Work", 11],
-  ["Eat", 2],
-  ["Commute", 2],
-  ["Watch TV", 2],
-  ["Sleep", 7], // CSS-style declaration
-];
+import { getMetrics } from "../api/api";
 
 export const options = {
   pieHole: 0.4,
@@ -18,14 +9,7 @@ export const options = {
 };
 
 function ApplicationMetrics() {
-  const { isLoading, error, data } = useQuery('metrics', () =>
-    // TODO: Fetch applications from backend
-    // fetch('https://api.greatgood.com/applications').then(res =>
-    //   res.json()
-    // )
-    //
-    applicationMetrics
-  )
+  const { isLoading, error, data } = useQuery('metrics', () => getMetrics())
 
   const chartData = useMemo(() => {
     if (!data) {
@@ -43,7 +27,7 @@ function ApplicationMetrics() {
 
   }, [data]);
 
-  if (isLoading) return <>'Loading...'</>
+  if (isLoading) return <div className="load-bar">Loading Metrics...</div>
 
   if (error) return <>'An error has occurred'</>
 

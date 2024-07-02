@@ -18,19 +18,10 @@ export type Overrides = {
   required: Array<any>;
 };
 
-export type Attribute = {
-  addedByUser: boolean;
-  description: string;
-  idVerification: IdVerification;
-  isAdditional: boolean;
-  label: string;
-  optional: boolean;
-  overrides: Overrides;
-  schemaId: string;
-  valid: boolean;
-  value: string;
-  weight: number;
-  _id: string;
+export type Attributes = {
+  firstName: string;
+  lastName: string;
+  email: string;
 }
 
 export type RiskScoring = {
@@ -40,7 +31,7 @@ export type RiskScoring = {
 export type Application = {
   id: string;
   createdAt: string;
-  attributes: Array<Attribute>;
+  attributes: Attributes;
   type: string;
   riskScoring: RiskScoring;
   statusName: string;

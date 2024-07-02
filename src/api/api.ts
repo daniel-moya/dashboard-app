@@ -22,3 +22,6 @@ const api = {
 }
 
 export const getApplications = async () => api.get('applications');
+
+export const getMetrics = async () => api.get('metrics');
+
